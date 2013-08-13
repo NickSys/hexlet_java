@@ -2,7 +2,7 @@ package com.lesson;
 
 
 public class Field {
-
+    // git
     private static final int DEFAULT_FIELD_SIZE = 3;
 
     private static final char DEFAULT_CELL_VALUE = ' ';
