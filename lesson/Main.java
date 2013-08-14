@@ -9,9 +9,5 @@ public class Main {
         field.showField();
 
 
-        field = new Field(10);
-        field.eraseField();
-        field.showField();
-
     }
 }
