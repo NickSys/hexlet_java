@@ -3,18 +3,35 @@ package com.lesson2;
 
 public class Main {
     public static void main(String[] args) {
+
         Human human = new Human("Max");
-        System.out.println(human.getName());
+        human.setAge(30);
+        System.out.println(human.getName()+ ", age - " + human.getAge());
+        human.birthDay();
+        System.out.println(human.getName()+ ", age after birthday- " + human.getAge());
         System.out.println("~~~~~~~~~~~~~~~~~~~");
+
+
+
         Student student = new Student("Nick");
-        System.out.println(student.getName());
-        House house = new House();
-        Human houseOwner = student;
-        house.setHuman(student);
-        System.out.println("Owner house: "+house.getOwnerName());
+        student.setAge(38);
+        student.setCourse(1);
+        System.out.println(student.getName() + ", age - " + student.getAge() +", course - " + student.getCourse());
+
+        House houseForStudents = new House();
+
+        House houseForTeachers = new House();
+
+        houseForStudents.setHuman(student);
+        System.out.println("Owner house: " + houseForStudents.getOwnerName());
 
         Teacher teacher = new Teacher("vasa vasa");
-        house.setHuman(teacher);
-        System.out.println("Owner house: "+house.getOwnerName());
+        houseForTeachers.setHuman(teacher);
+
+        System.out.println("Owner house: " + houseForTeachers.getOwnerName());
+
+        System.out.println("Count human in house Students - " + houseForStudents.countHuman);
+        System.out.println("Count human in house Teachers - " + houseForTeachers.countHuman);
+
     }
 }
