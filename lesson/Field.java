@@ -1,6 +1,5 @@
 package com.lesson;
 
-
 public class Field {
     // git
     private static final int DEFAULT_FIELD_SIZE = 3;
@@ -12,7 +11,6 @@ public class Field {
     private final char[][] field;
 
 
-
    public Field() {
          this(DEFAULT_FIELD_SIZE);
    }
@@ -22,17 +20,16 @@ public class Field {
         field = new char[fieldSize][fieldSize];
     }
 
-
     public int getFieldSize() {
         return fieldSize;
     }
-
 
     public void eraseField() {
         for (int i=0; i < fieldSize;i++) {
             eraseLine(i);
         }
     }
+
     public void showField() {
         for (int i=0; i < fieldSize;i++) {
             showLine(i);
