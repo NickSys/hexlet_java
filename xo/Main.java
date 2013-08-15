@@ -16,27 +16,12 @@ public class Main {
         player1.metka = 'X';
         player2.metka = '0';
 
-        for (int i=0;i<field.fieldSize;i++){
 
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println(player1.name + " введите номер строки: ");
-        int x = Integer.parseInt(reader.readLine())-1;
-        System.out.println(player1.name + " введите номер столбца: ");
-        int y = Integer.parseInt(reader.readLine())-1;
+        player1.doMove();
 
-            field.changeFieldXY(x,y,player1.metka);
-            field.showField();
 
-            System.out.println();
 
-            System.out.println(player2.name + " введите номер строки: ");
-             x = Integer.parseInt(reader.readLine())-1;
-            System.out.println(player2.name + " введите номер столбца: ");
-             y = Integer.parseInt(reader.readLine())-1;
-            field.changeFieldXY(x,y,player2.metka);
-            field.showField();
 
-        }
 
 
 

@@ -14,6 +14,9 @@ public class Field {
 
     private final char[][] field;
 
+    public int[][] listMove1;
+
+    public int[][] listMove2;
 
     public Field() {
         this(DEFAULT_FIELD_SIZE);
@@ -30,6 +33,8 @@ public class Field {
         }
 
         field = new char[fieldSize][fieldSize];
+        listMove1 = new int[fieldSize][fieldSize];
+        listMove2 = new int[fieldSize][fieldSize];
     }
 
     public int getFieldSize() {
